@@ -48,7 +48,7 @@ class MinMaxTradingStrategy(TradingStrategy):
         return prices[-1] < self.min_price
 
     def should_sell(self, prices: list[float]) -> bool:
-        # sell if it's above $33,000
+        # sell if it's above the max_price
         return prices[-1] > self.max_price
 
 
